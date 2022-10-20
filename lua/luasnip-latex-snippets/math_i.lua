@@ -46,6 +46,9 @@ local math_i = {
 		{ trig = "sequence", name = "Sequence indexed by n, from m to infinity" },
 		"(${1:a}_${2:n})_{${2:n}=${3:m}}^{${4:\\infty}}"
 	),
+	
+	with_priority(ls.parser.parse_snippet({ trig = "hat", name = "hat" }, "\\hat{$1}$0 "), 10),
+	with_priority(ls.parser.parse_snippet({ trig = "bar", name = "bar" }, "\\overline{$1}$0 "), 10),
 }
 
 return math_i
