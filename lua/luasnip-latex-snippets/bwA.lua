@@ -8,6 +8,9 @@ local bwA = {
 
 	ls.parser.parse_snippet({ trig = "beg", name = "begin{} / end{}" }, "\\begin{$1}\n\t$0\n\\end{$1}"),
 	ls.parser.parse_snippet({ trig = "case", name = "cases" }, "\\begin{cases}\n\t$1\n\\end{cases}"),
+	
+	ls.parser.parse_snippet({ trig = "item", name = "Itemize environment" }, "\\begin{$1}\n\t\\item$0\n\\end{$1}"),
+
 
 }
 
