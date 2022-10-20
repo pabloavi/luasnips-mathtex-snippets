@@ -22,7 +22,7 @@ local math_i = {
 	ls.parser.parse_snippet({ trig = "pmat", name = "pmat" }, "\\begin{pmatrix} $1 \\end{pmatrix} $0"),
 
 	ls.parser.parse_snippet({ trig = "lr", name = "left( right)" }, "\\left( ${1:${TM_SELECTED_TEXT}} \\right) $0"),
-	ls.parser.parse_snippet({ trig = "lr(", name = "left( right)" }, "\\left( ${1:${TM_SELECTED_TEXT}} \\right) $0"),
+	ls.parser.parse_snippet({ trig = "(", name = "left( right)" }, "\\left( ${1:${TM_SELECTED_TEXT}} \\right) $0"),
 	ls.parser.parse_snippet(
 		{ trig = "lr|", name = "left| right|" },
 		"\\left\\| ${1:${TM_SELECTED_TEXT}} \\right\\| $0"
