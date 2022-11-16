@@ -1,8 +1,5 @@
 local ls = require("luasnip")
 
-local normal_wA = {
-	ls.parser.parse_snippet({ trig = "mk", name = "Math" }, "\\( ${1:${TM_SELECTED_TEXT}} \\)$0"),
-	ls.parser.parse_snippet({ trig = "dm", name = "Block Math" }, "\\[\n${1:${TM_SELECTED_TEXT}}\n.\\] $0"),
-}
+local normal_wA = {}
 
 return normal_wA
