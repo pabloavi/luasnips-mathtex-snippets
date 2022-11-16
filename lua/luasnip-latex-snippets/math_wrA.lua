@@ -49,53 +49,6 @@ local frac = s({
 	i(0),
 })
 
-local math_wrA = {
-	frac,
-
-	s({
-		trig = "([%a])(%d)",
-		name = "auto subscript",
-	}, {
-		f(function(_, snip)
-			return string.format("%s_%s", snip.captures[1], snip.captures[2])
-		end, {}),
-		i(0),
-	}),
-
-	s({
-		trig = "([%a])_(%d%d)",
-		name = "auto subscript 2",
-	}, {
-		f(function(_, snip)
-			return string.format("%s_{%s}", snip.captures[1], snip.captures[2])
-		end, {}),
-		i(0),
-	}),
-
-	s({
-		trig = "(\\?[%w]+\\?^%w)/",
-		name = "Fraction no ()",
-	}, vim.deepcopy(frac_no_parens)),
-
-	s({
-		trig = "(\\?[%w]+\\?_%w)/",
-		name = "Fraction no ()",
-	}, vim.deepcopy(frac_no_parens)),
-
-	s({
-		trig = "(\\?[%w]+\\?^{%w*})/",
-		name = "Fraction no ()",
-	}, vim.deepcopy(frac_no_parens)),
-
-	s({
-		trig = "(\\?[%w]+\\?_{%w*})/",
-		name = "Fraction no ()",
-	}, vim.deepcopy(frac_no_parens)),
-
-	s({
-		trig = "(\\?%w+)/",
-		name = "Fraction no ()",
-	}, vim.deepcopy(frac_no_parens)),
-}
+local math_wrA = {}
 
 return math_wrA
